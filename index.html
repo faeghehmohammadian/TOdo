@@ -5,12 +5,18 @@
     <link rel="stylesheet" href="style.css">
     <title>TOdo</title>
 </head>
-<body id="mainbody">
+<body>
     <div class="header">TOdo List</div>
-    <div class="list">
-        <div class="number">1</div>
-        <input type="text" class="todoinput" value="">
-        <button class="addbutton">Add New TOdo</button>
+    <div class="nav">
+        <button class="allnav activeNavClick"">ALL</button>
+        <button class="activenav">Active</button>
+        <button class="completednav">Completed</button>
+    </div>
+    <div id="mainbody">
+        <div class="list">
+            <input type="text" class="todoinput" value="">
+            <button class="addbutton">Add New TOdo</button>
+        </div>
     </div>
     <script src="script.js"></script> 
 </body>

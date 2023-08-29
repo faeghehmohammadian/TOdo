@@ -3,19 +3,26 @@
     padding: 0;
     margin: 0;
     background-color: dedede;
+    font-family: "Rancho";
+    font-size: large;
+    border-color: var(--main-color);
 }
 :root{
-    --main-color:aquamarine;
+    --main-color: rgb(247, 202, 201);
     --main-hover: rgb(36, 85, 74);
 }
-img{
-    width: 30px;
-    float: right;
+body{
+    width: 70vw;
+    height: 100vh;
+    margin: auto;
+    border: solid var(--main-color);
+}
+.mainbody{
+    width: 90%;
 }
 .header{
     font-family: 'Rancho';
-    width: 100vw;
-    background-color:var(--main-color);
+    background:linear-gradient(white,rgb(247, 202, 201));
     padding: 20px;
     font-size:50px;
 }
@@ -24,20 +31,51 @@ img{
     flex-direction: row;
     justify-content: start;
 }
+.nav{
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    background-color: var(--main-color);
+}
+.allnav{
+    font-family: "Rancho";
+    width: 80px;
+    border: none;
+    border-radius: 20px 20px -0 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--main-color);
+}
+
+.activenav{
+    width: 80px;
+    border: none;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--main-color);
+}
+
+.completednav{
+    width: 80px;
+    border: none;
+    border-radius: 20px 20px 0 0;
+    margin-left: 5%;
+    background-color: var(--main-color);
+}
+
 .todoinput{
     font-family: 'Rancho';
     font-size: 2em;
-    width: 70vw;
+    width: 70%;
     height: 10vh;
-    margin: 10px;
-    background-color:var(--main-color);
+    margin: 20px;
+    background-color: dedede;
     border-radius: 8px;
-    padding-left: 10px;
+    box-shadow: 5px 10px 20px var(--main-color) inset
 }
 .addbutton{
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 3px;
+    margin: 20px;
+    height: 10vh;
     border-radius: 10%;
 }
 .addfun{
@@ -60,8 +98,9 @@ img{
 }
 .deletebtn{
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
+    height: 10vh;
     border-radius: 10%;
 
 }
@@ -71,8 +110,9 @@ img{
 }
 .addbtn{
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
+    height: 10vh;
     border-radius: 10%;
 
 }
@@ -82,12 +122,16 @@ img{
 }
 .donebtn{
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
+    height: 10vh;
     border-radius: 10%;
 
 }
 .donebtn:hover{
     background-color:var(--main-hover);
     color: white;
+}
+.activeNavClick{
+    background-color:#dedede;
 }
