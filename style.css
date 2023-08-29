@@ -4,15 +4,15 @@
     margin: 0;
     background-color: dedede;
     font-family: "Rancho";
-    font-size: large;
+    font-size: 28px;
     border-color: var(--main-color);
 }
 :root{
     --main-color: rgb(247, 202, 201);
-    --main-hover: rgb(36, 85, 74);
+    --main-hover:  rgb(247, 162, 160);
 }
 body{
-    width: 70vw;
+    width: 65vw;
     height: 100vh;
     margin: auto;
     border: solid var(--main-color);
@@ -32,30 +32,30 @@ body{
     justify-content: start;
 }
 .nav{
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: start;
     background-color: var(--main-color);
 }
 .allnav{
     font-family: "Rancho";
-    width: 80px;
+    width:150px;
     border: none;
     border-radius: 20px 20px -0 0;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     background-color: var(--main-color);
 }
 
 .activenav{
-    width: 80px;
+    width: 150px;
     border: none;
     border-radius: 20px 20px 0 0;
     background-color: var(--main-color);
 }
 
 .completednav{
-    width: 80px;
+    width: 150px;
     border: none;
     border-radius: 20px 20px 0 0;
     margin-left: 5%;
@@ -68,6 +68,7 @@ body{
     width: 70%;
     height: 10vh;
     margin: 20px;
+    padding-left: 10px;
     background-color: dedede;
     border-radius: 8px;
     box-shadow: 5px 10px 20px var(--main-color) inset
