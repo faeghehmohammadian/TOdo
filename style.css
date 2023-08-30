@@ -15,12 +15,14 @@ body{
     width: 65vw;
     height: 100vh;
     margin: auto;
+    background-color: var(--main-color) ;
     border: solid var(--main-color);
 }
 .mainbody{
     width: 90%;
 }
 .header{
+    text-align: center;
     font-family: 'Rancho';
     background:linear-gradient(white,rgb(247, 202, 201));
     padding: 20px;
