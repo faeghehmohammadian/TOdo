@@ -32,9 +32,12 @@ function addnewbtn(){
         Editbtn.addEventListener('click',function(){
             if(input.hasAttribute('disabled')){
                 input.removeAttribute('disabled','');
+                input.removeAttribute('style');
+                Editbtn.classList.add('selectedbtn');
             }
             else{
                 input.setAttribute('disabled','');
+                Editbtn.classList.remove('selectedbtn');
             }
         });
 
@@ -43,9 +46,16 @@ function addnewbtn(){
         Donebtn.classList.add("donebtn");
         Donebtn.innerHTML='Done';
         Donebtn.addEventListener('click',function(){
+            if (input.hasAttribute('style')){
+                input.removeAttribute('style');
+                Donebtn.classList.remove('selectedbtn');
+            }
+            else{
             input.style.textDecoration = "line-through";
             input.setAttribute('disabled','');
             newdiv.setAttribute('status','completed');
+            Donebtn.classList.add('selectedbtn');
+            }
         });
         
         newdiv.append(Editbtn,deletebtn,Donebtn);

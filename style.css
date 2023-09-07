@@ -138,3 +138,6 @@ body{
 .activeNavClick{
     background-color:#dedede;
 }
+.selectedbtn{
+    background-color: var(--main-hover);
+}
