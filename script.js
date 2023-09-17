@@ -20,43 +20,54 @@ function addnewbtn(){
         newdiv.setAttribute('status','active');
         inputvalue.value="";
         i++;
+        let editboolean=false;
+        let doneboolean=false;
         const deletebtn=document.createElement('button');
         deletebtn.classList.add("deletebtn");
         deletebtn.innerHTML='Delete';
         deletebtn.addEventListener('click', function(){
-            newdiv.remove();
+            if(editboolean==false && doneboolean==false){
+                newdiv.remove();
+            }
         });
         const Editbtn=document.createElement('button');
         Editbtn.classList.add("addbtn");
         Editbtn.innerHTML='Edit';
         Editbtn.addEventListener('click',function(){
+
+            if(doneboolean==false){
             if(input.hasAttribute('disabled')){
                 input.removeAttribute('disabled','');
                 input.removeAttribute('style');
                 Editbtn.classList.add('selectedbtn');
+                editboolean=true;
             }
             else{
                 input.setAttribute('disabled','');
                 Editbtn.classList.remove('selectedbtn');
+                editboolean=false;
             }
+        }
         });
-
-
         const Donebtn=document.createElement('button');
         Donebtn.classList.add("donebtn");
         Donebtn.innerHTML='Done';
         Donebtn.addEventListener('click',function(){
+            if(editboolean==false){
             if (input.hasAttribute('style')){
                 input.removeAttribute('style');
                 Donebtn.classList.remove('selectedbtn');
+                newdiv.setAttribute('status','active');
+                doneboolean=false;
             }
             else{
+            doneboolean=true;
             input.style.textDecoration = "line-through";
             input.setAttribute('disabled','');
             newdiv.setAttribute('status','completed');
             Donebtn.classList.add('selectedbtn');
             }
-        });
+        }});
         
         newdiv.append(Editbtn,deletebtn,Donebtn);
     
