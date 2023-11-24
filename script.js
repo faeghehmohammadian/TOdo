@@ -18,7 +18,6 @@ function addnewbtn(){
         input.setAttribute('disabled','');
         newdiv.appendChild(input);
         newdiv.setAttribute('status','active');
-        inputvalue.value="";
         i++;
         let editboolean=false;
         let doneboolean=false;
